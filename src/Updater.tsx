@@ -31,7 +31,7 @@ export default function Updater() {
     useEffect(() => {
         const main = async () => {
             let sysapps = [
-                "about.tapp", "app store.tapp", "browser.tapp", "calculator.tapp", "feedback.tapp", "files.tapp", "media viewer.tapp", "settings.tapp", "task manager.tapp", "terminal.tapp", "text editor.tapp"
+                "about.tapp", "app store.tapp", "browser.tapp", "files.tapp", "media viewer.tapp", "settings.tapp", "task manager.tapp", "terminal.tapp", "text editor.tapp"
             ]
             if (await dirExists("/system/tmp/terb-upd/")) {
                 // @ts-expect-error

@@ -108,28 +108,6 @@ export async function init() {
                     src: "/apps/browser.tapp/index.html"
                 },
                 {
-                    title: "Feedback",
-                    icon: "/fs/apps/system/feedback.tapp/icon.svg",
-                    src: "https://forms.gle/m664xxmrugWQADQt9",
-                    proxy: true,
-                    size: {
-                        width: 600,
-                        height: 500
-                    }
-                },
-                {
-                    title: "Calculator",
-                    icon: "/fs/apps/system/calculator.tapp/icon.svg",
-                    src: "/fs/apps/system/calculator.tapp/index.html",
-                    snapable: false,
-                    maximizable: false,
-                    size: {
-                        width: 338,
-                        height: 556
-                    },
-                    controls: ["minimize", "close"]
-                },
-                {
                     title: "About",
                     icon: "/fs/apps/system/about.tapp/icon.svg",
                     src: "/fs/apps/system/about.tapp/index.html"
