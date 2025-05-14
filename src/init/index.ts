@@ -91,18 +91,6 @@ export async function init() {
                     single: true,
                 },
                 {
-                    title: {
-                        text: "App Store",
-                        html: `<div style="display: flex; flex-direction: row; height: 32px"; margin-top: -32px;><input class="app-search bg-white/15 border-0 outline-hidden text-white py-1 px-2 rounded-lg transition-all duration-150 ease-in-out font-semibold cursor-text" type="search" placeholder="Search for apps" /><select drag="false" id="repo-inp" class="bg-[#ffffff20] absolute z-9 max-h-[160px] rounded-lg cursor-pointer backdrop-blur-[100px] overflow-auto transition-all duration-150 ease-in-out h-8 w-[130px] right-[70px] text-center flex items-center justify-center" onchange="(function(){const selectValue = document.getElementById('repo-inp').value;if (selectValue === 'cust') {tb.dialog.Message({title: 'Enter Custom TB Repository',onOk: async (val) => {localStorage.setItem('appRepo', val);}});tb.window.reload()} else {localStorage.setItem('appRepo', selectValue);} tb.window.reload()})()"><option style="background-color: #00000096; text-align: center;" value="https://raw.githubusercontent.com/terbiumOS/app-repo/main/apps.json">TB Main</option><option style="background-color: #00000096; text-align: center;" value="https://raw.githubusercontent.com/Notplayingallday383/app-repo/main/apps.json">XSTARS Xtras</option><option style="background-color: #00000096; text-align: center;" value="cust">Custom Repo</option></select></div>`
-                    },
-                    icon: "/fs/apps/system/app store.tapp/icon.svg",
-                    src: "/fs/apps/system/app store.tapp/index.html",
-                    size: {
-                        width: 775,
-                        height: 500
-                    },
-                },
-                {
                     title: "Browser",
                     icon: "/apps/browser.tapp/icon.svg",
                     src: "/apps/browser.tapp/index.html"
@@ -145,17 +133,6 @@ export async function init() {
                 icon: "/fs/apps/system/settings.tapp/icon.svg",
                 isPinnable: true,
                 src: '/fs/apps/system/settings.tapp/index.html'
-            },
-            {
-                title: "Feedback",
-                icon: "/fs/apps/system/feedback.tapp/icon.svg",
-                proxy: true,
-                isPinnable: true,
-                src: "https://forms.gle/m664xxmrugWQADQt9",
-                size: {
-                    width: 600,
-                    height: 500
-                }
             }
         ]
         await Filer.promises.writeFile('/system/var/terbium/dock.json', JSON.stringify(dockPins))

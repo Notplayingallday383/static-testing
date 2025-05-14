@@ -499,7 +499,6 @@ const StartItem: FC<TStartItem> = ({ icon, title, onClick, inPins, className, sr
         { "title": "Terminal" },
         { "title": "Files" },
         { "title": "Settings" },
-        { "title": { "text": "App Store" } },
         { "title": "Browser" },
         { "title": "Feedback" },
         { "title": "About" },

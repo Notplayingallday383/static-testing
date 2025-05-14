@@ -4,7 +4,6 @@ import "./styles/shell.css"
 import Wifi from "./Wifi";
 import getTime from "../apis/Time";
 import { useEffect, useState, useRef } from "react";
-import Weather from "./Weather";
 import NotificationCenter from "./NotificationCenter";
 import AppIsland from "./AppIsland";
 import Power from "./Power";
@@ -58,9 +57,6 @@ const Shell = () => {
                         <div className="font-extrabold select-none pointer-events-none">{username}</div>
                     </div>
                     <span className="h-6 w-1 bg-[#ffffff48] rounded-xs mr-0.5"></span>
-                    <div className="weather font-[700] cursor-default">
-                        <Weather />
-                    </div>
                     <div className="time font-[700] cursor-default">{time}</div>
                 </div>
                 <div className="island system_island gap-3 pl-2.5 pr-1.5 py-1.5 rounded-lg" style={{backgroundImage: "url(/assets/img/grain.png)"}}>
